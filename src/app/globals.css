@@ -1,0 +1,186 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --canvas: #f8fafc;
+    --surface: #ffffff;
+    --surface-hover: #f1f5f9;
+    --surface-active: #e2e8f0;
+    --border-subtle: #e2e8f0;
+    --border-strong: #cbd5e1;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --brand-primary: #0f172a;
+    --brand-accent: #2563eb;
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+  }
+}
+
+body {
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.011em;
+  text-rendering: optimizeLegibility;
+}
+
+/* Subtle selection tone */
+::selection {
+  background-color: #dbeafe;
+  color: #1e3a8a;
+}
+
+/* Refined Studio Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  background-color: #0f172a;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  padding: 0.4375rem 0.875rem;
+  border-radius: 0.5rem;
+  border: 1px solid #0f172a;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: all 120ms cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background-color: #1e293b;
+  border-color: #1e293b;
+}
+.btn-primary:active {
+  transform: scale(0.98);
+}
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  background-color: #ffffff;
+  color: #334155;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  padding: 0.4375rem 0.875rem;
+  border-radius: 0.5rem;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.02);
+  transition: all 120ms cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  background-color: #f8fafc;
+  color: #0f172a;
+  border-color: #94a3b8;
+}
+.btn-secondary:active {
+  transform: scale(0.98);
+  background-color: #f1f5f9;
+}
+.btn-secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  background-color: transparent;
+  color: #475569;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  padding: 0.4375rem 0.625rem;
+  border-radius: 0.5rem;
+  transition: all 120ms ease;
+  cursor: pointer;
+}
+.btn-ghost:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+.btn-ghost:active {
+  background-color: #e2e8f0;
+}
+
+/* Studio Dossier Card */
+.studio-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.02);
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+.studio-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 3px 8px -1px rgba(0, 0, 0, 0.04);
+}
+
+/* Studio Paper Preview Shadow */
+.studio-paper-shadow {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 4px 12px -2px rgba(0, 0, 0, 0.08), 0 12px 28px -4px rgba(0, 0, 0, 0.06);
+}
+
+/* Print styles for ATS & standard PDF export */
+@media print {
+  body {
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .cv-document-page {
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    page-break-after: always;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 15mm 15mm 15mm 15mm;
+  }
+}
+
+/* Precision scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+

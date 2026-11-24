@@ -1,0 +1,34 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/cache
+
+# Next.js build output
+/.next/
+/out/
+/dist/
+/build/
+
+# Testing & Coverage
+/coverage
+
+# Environment variables
+.env*.local
+.env
+.env.production
+.env.development
+
+# Vercel & Netlify
+.vercel
+.netlify
+
+# Debug and Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
